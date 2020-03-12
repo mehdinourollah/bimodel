@@ -9,8 +9,7 @@ var bodyParser = require('body-parser');
 
 
 var indexRouter = require('./routes/index');
-var ppkRouter = require('./routes/ppk/ppk');
-var ppkptest = require('./routes/ppk/ppkptest')
+
 
 var app = express();
 
@@ -40,10 +39,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-
-app.use('/ppk', ppkRouter);
-app.use('/ppk/ptest', ppkptest);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
